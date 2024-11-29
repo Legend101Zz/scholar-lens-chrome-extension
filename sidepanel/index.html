@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>ScholarLens</h1>
+        <div class="tabs">
+          <button class="tab active" data-tab="summary">Summary</button>
+          <button class="tab" data-tab="methodology">Methodology</button>
+          <button class="tab" data-tab="citations">Citations</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="tab-content active" id="summary">
+          <div class="loading" hidden>Analyzing paper...</div>
+          <div class="summary-content"></div>
+        </div>
+
+        <div class="tab-content" id="methodology">
+          <div class="methodology-content"></div>
+        </div>
+
+        <div class="tab-content" id="citations">
+          <div class="citations-content"></div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

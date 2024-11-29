@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "ScholarLens",
+  "version": "1.0",
+  "description": "AI-powered research paper analysis tool",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "sidePanel",
+    "aiLanguageModelOriginTrial",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel/index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://scholar.google.com/*", "https://*.pdf"],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}
